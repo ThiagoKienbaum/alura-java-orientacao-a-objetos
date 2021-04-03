@@ -2,6 +2,7 @@ package alura.java.orientacao.objetos;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -55,5 +56,9 @@ public class Test {
         System.out.println(dangerRoom);
         System.out.println(orderedLessons);
         System.out.println(dangerRoom.getStudents());
+
+        Student searchStudent = new Student(null, "Kurt Wagner");
+        Boolean hasSearchedStudent = dangerRoom.getStudents().contains(searchStudent);
+        System.out.println(hasSearchedStudent ? "Yes" : "No");
     }
 }
