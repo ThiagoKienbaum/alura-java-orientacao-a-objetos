@@ -1,9 +1,6 @@
 package alura.java.orientacao.objetos;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Course {
 
@@ -26,7 +23,7 @@ public class Course {
     }
 
     public List<Lesson> getLessons() {
-        return this.lessons;
+        return Collections.unmodifiableList(this.lessons);
     }
 
     public void registerLesson(Lesson lesson) {
@@ -34,7 +31,7 @@ public class Course {
     }
 
     public Set<Student> getStudents() {
-        return this.students;
+        return Collections.unmodifiableSet(this.students);
     }
 
     public void registerStudent(Student student) {

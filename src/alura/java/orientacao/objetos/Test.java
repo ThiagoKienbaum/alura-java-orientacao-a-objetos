@@ -2,7 +2,9 @@ package alura.java.orientacao.objetos;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Test {
@@ -35,22 +37,23 @@ public class Test {
         dangerRoom.registerLesson(potions);
         dangerRoom.registerLesson(herbology);
         dangerRoom.registerLesson(defenseAgainstDarkArts);
-        Collections.sort(dangerRoom.getLessons());
 
         dangerRoom.registerStudent(nightcrawler);
         dangerRoom.registerStudent(wolverine);
         dangerRoom.registerStudent(iceman);
         dangerRoom.registerStudent(beast);
 
+        List<Lesson> orderedLessons = new ArrayList<>(dangerRoom.getLessons());
+        Collections.sort(orderedLessons);
         PrintWriter printWriter = new PrintWriter("output.txt");
 
         printWriter.println(dangerRoom);
-        printWriter.println(dangerRoom.getLessons());
+        printWriter.println(orderedLessons);
         printWriter.println(dangerRoom.getStudents());
         printWriter.close();
 
         System.out.println(dangerRoom);
-        System.out.println(dangerRoom.getLessons());
+        System.out.println(orderedLessons);
         System.out.println(dangerRoom.getStudents());
     }
 }
