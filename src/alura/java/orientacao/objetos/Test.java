@@ -3,10 +3,7 @@ package alura.java.orientacao.objetos;
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
-
-import static java.util.Collections.*;
 
 public class Test {
 
