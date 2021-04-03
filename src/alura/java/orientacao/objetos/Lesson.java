@@ -19,6 +19,6 @@ public class Lesson {
     }
 
     public String toString() {
-        return "Name: " + this.name + "Duration: " + this.durationMinutes + "min.";
+        return "Name: " + this.name + ", Duration: " + this.durationMinutes + "min";
     }
 }

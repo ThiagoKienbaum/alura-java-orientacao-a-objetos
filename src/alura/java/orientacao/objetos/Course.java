@@ -40,6 +40,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Curso: " + this.name + ", Instrutor: " + this.instructor;
+        return "Course: " + this.name + ", Instructor: " + this.instructor;
     }
 }
