@@ -59,6 +59,9 @@ public class Test {
 
         Student searchStudent = new Student(null, "Kurt Wagner");
         Boolean hasSearchedStudent = dangerRoom.getStudents().contains(searchStudent);
-        System.out.println(hasSearchedStudent ? "Yes" : "No");
+        System.out.println("Has searched student? " + (hasSearchedStudent ? "Yes" : "No"));
+
+        Student studentSearchedById = dangerRoom.searchRegisteredStudentById(2);
+        System.out.println(studentSearchedById);
     }
 }

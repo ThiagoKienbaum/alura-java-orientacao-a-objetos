@@ -2,8 +2,10 @@ package alura.java.orientacao.objetos;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Course {
@@ -12,6 +14,7 @@ public class Course {
     private final String instructor;
     private final List<Lesson> lessons = new ArrayList<>();
     private final Set<Student> students = new HashSet<>();
+    private final Map<Integer, Student> idToStudent = new HashMap<>();
 
     public Course(String name, String instructor) {
         this.name = name;
@@ -40,6 +43,11 @@ public class Course {
 
     public void registerStudent(Student student) {
         this.students.add(student);
+        this.idToStudent.put(student.getId(), student);
+    }
+
+    public Student searchRegisteredStudentById(Integer id) {
+        return idToStudent.get(id);
     }
 
     @Override
