@@ -2,7 +2,11 @@ package alura.java.orientacao.objetos;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+
+import static java.util.Collections.*;
 
 public class Test {
 
@@ -25,10 +29,16 @@ public class Test {
         Lesson defenseAgainstDarkArts = new Lesson("Defense Against the Dark Arts", 180);
         Lesson herbology = new Lesson("Herbology", 210);
         Lesson potions = new Lesson("Potions", 100);
+        try {
+            Lesson empty = new Lesson(null, null);
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+        }
 
-        dangerRoom.registerLesson(defenseAgainstDarkArts);
-        dangerRoom.registerLesson(herbology);
         dangerRoom.registerLesson(potions);
+        dangerRoom.registerLesson(herbology);
+        dangerRoom.registerLesson(defenseAgainstDarkArts);
+        Collections.sort(dangerRoom.getLessons());
 
         dangerRoom.registerStudent(nightcrawler);
         dangerRoom.registerStudent(wolverine);

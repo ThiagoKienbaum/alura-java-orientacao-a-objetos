@@ -1,13 +1,16 @@
 package alura.java.orientacao.objetos;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class Course {
 
     private final String name;
     private final String instructor;
-    private List<Lesson> lessons = new LinkedList<>();
-    private Set<Student> students = new HashSet<>();
+    private final List<Lesson> lessons = new ArrayList<>();
+    private final Set<Student> students = new HashSet<>();
 
     public Course(String name, String instructor) {
         this.name = name;
